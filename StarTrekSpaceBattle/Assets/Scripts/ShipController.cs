@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class PursueEnemy : State
+class PursueTarget : State
 {
-    //Boid boid;
     Pursue pursue;
 
     public override void Enter()
@@ -25,20 +24,81 @@ class PursueEnemy : State
     }
 }
 
-public class ShipController : MonoBehaviour {
+class ArriveAtTarget : State
+{
+    Arrive arrive;
 
-    public void Restart()
+    public override void Enter()
     {
-        GetComponent<StateMachine>().ChangeState(new PursueEnemy(),gameObject.GetComponent<Boid>());
+        Debug.Log("Entering Arrive Mode!");
+        arrive = boid.GetComponent<Arrive>();
+        arrive.SetActive(true);
     }
+
+    public override void Exit()
+    {
+        arrive.SetActive(false);
+    }
+
+    public override void Think()
+    {
+
+    }
+}
+
+//class OffsetPursueTarget : State
+//{
+//    OffsetPursue offsetPursue;
+
+//    public override void Enter()
+//    {
+//        Debug.Log("Entering Offset Pursue Mode!");
+//        offsetPursue = boid.GetComponent<OffsetPursue>();
+//        offsetPursue.SetActive(true);
+//    }
+
+//    public override void Exit()
+//    {
+//        offsetPursue.SetActive(false);
+//    }
+
+//    public override void Think()
+//    {
+
+//    }
+//}
+
+class FollowPathState : State
+{
+    FollowPath followPath;
+
+    public override void Enter()
+    {
+        Debug.Log("Entering Offset Pursue Mode!");
+        followPath = boid.GetComponent<FollowPath>();
+        followPath.SetActive(true);
+    }
+
+    public override void Exit()
+    {
+        followPath.SetActive(false);
+    }
+
+    public override void Think()
+    {
+
+    }
+}
+
+public class ShipController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Restart();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        GetComponent<StateMachine>().ChangeState(new FollowPathState(),gameObject.GetComponent<Boid>());
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

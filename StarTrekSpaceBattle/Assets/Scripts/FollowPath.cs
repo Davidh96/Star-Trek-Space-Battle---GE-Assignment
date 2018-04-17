@@ -1,43 +1,35 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowPath : SteeringBehaviour {
 
     public Path path;
+    private Vector3 target;
 
-    Vector3 nextWaypoint;
-
-    public void OnDrawGizmos()
+    // Use this for initialization
+    void Start()
     {
-        if (isActiveAndEnabled && Application.isPlaying)
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(transform.position, nextWaypoint);
-        }
+        target = path.NextNode();
     }
 
-    public void Start()
-    {
-        
-    }
-
+    // Update is called once per frame
     public override Vector3 Calculate()
     {
-        nextWaypoint = path.NextWaypoint();
-        if (Vector3.Distance(transform.position, nextWaypoint) < 3)
+        if (Vector3.Distance(transform.position, target) < 3)
         {
-            path.AdvanceToNext();
+            target = path.AdvanceToNext();
         }
 
-        if (!path.looped && path.IsLast())
-        {
-            return boid.ArriveForce(nextWaypoint, 20);
-        }
-        else
-        {
-            return boid.SeekForce(nextWaypoint);
-        }
+        return boid.SeekForce(target);
+
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 nextNode = path.NextNode();
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, nextNode);
     }
 }

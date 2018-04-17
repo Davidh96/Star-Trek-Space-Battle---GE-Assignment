@@ -69,7 +69,10 @@ public class StateMachine : MonoBehaviour {
         yield return new WaitForSeconds(Random.Range(0, 0.5f));
         while (true)
         {
-            currentState.Think();
+            if (currentState != null)
+            {
+                currentState.Think();
+            }
             yield return new WaitForSeconds(1.0f / (float)updatesPerSecond);
         }
     }
