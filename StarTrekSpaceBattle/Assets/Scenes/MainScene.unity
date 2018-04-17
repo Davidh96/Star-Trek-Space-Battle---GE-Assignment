@@ -426,6 +426,20 @@ MonoBehaviour:
   boid: {fileID: 0}
   active: 1
   target: {fileID: 1444383902}
+--- !u!114 &1430408946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430408937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ce58027b93e0040998ced3755d1856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1813588410114432, guid: fb57ceb693d59714e91bc13006244897,
+    type: 2}
+  fireRate: 3
 --- !u!1 &1444383900 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1143915778072030, guid: 0a1921ea17c1f454689f96e10f8d6bee,

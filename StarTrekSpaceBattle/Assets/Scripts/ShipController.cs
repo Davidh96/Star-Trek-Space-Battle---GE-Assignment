@@ -20,7 +20,7 @@ class PursueTarget : State
 
     public override void Think()
     {
-
+        //if certain distance and target is in sight (dot product) = attackstate
     }
 }
 
@@ -90,11 +90,34 @@ class FollowPathState : State
     }
 }
 
+class AttackTarget : State
+{
+
+    public override void Enter()
+    {
+        Debug.Log("Entering Attack Mode!");
+        
+
+    }
+
+    public override void Exit()
+    {
+
+    }
+
+    public override void Think()
+    {
+
+    }
+}
+
 public class ShipController : MonoBehaviour {
+
+    
 
     // Use this for initialization
     void Start () {
-        GetComponent<StateMachine>().ChangeState(new FollowPathState(),gameObject.GetComponent<Boid>());
+        GetComponent<StateMachine>().ChangeState(new AttackTarget(),gameObject.GetComponent<Boid>());
     }
 
     // Update is called once per frame
