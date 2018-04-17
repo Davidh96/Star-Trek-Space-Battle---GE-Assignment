@@ -3661,7 +3661,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4894676260692172, guid: 0ef63af5fbf43c945ad77c4f3d5e0688, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -62.1
       objectReference: {fileID: 0}
     - target: {fileID: 4894676260692172, guid: 0ef63af5fbf43c945ad77c4f3d5e0688, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7224,7 +7224,7 @@ MonoBehaviour:
   FleeEnabled: 0
   ArriveEnabled: 0
   FollowPathEnabled: 0
-  PursuitEnabled: 1
+  PursuitEnabled: 0
   EvadeEnabled: 0
   OffsetPursuitEnabled: 0
   pursueTarget: {fileID: 1444383900}
@@ -7237,7 +7237,9 @@ MonoBehaviour:
   mass: 1
   velocity: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
   maxSpeed: 5
+  damping: 0.01
 --- !u!114 &1430408939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7311,7 +7313,9 @@ MonoBehaviour:
   mass: 1
   velocity: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
   maxSpeed: 5
+  damping: 0.01
 --- !u!4 &1444383905
 Transform:
   m_ObjectHideFlags: 0

@@ -26,13 +26,16 @@ public class SteeringBehaviours : MonoBehaviour {
     // Required for the forward euler integration function
     public Vector3 velocity;
     public Vector3 force;
+    public Vector3 acceleration;
     public float maxSpeed;
+    public float damping = 0.01f;
 
     // Constructor
     public SteeringBehaviours()
     {
         force = Vector3.zero;
         velocity = Vector3.zero;
+        acceleration = Vector3.zero;
         path = new Path(); // An empty path
         mass = 1.0f;
         maxSpeed = 5.0f;
@@ -177,20 +180,25 @@ public class SteeringBehaviours : MonoBehaviour {
             force += FollowPath();
         }
 
-        Vector3 acceleration = force / mass;
+        Vector3 newAcceleration = force / mass;
+
+        float smoothRate = Mathf.Clamp(9.0f * Time.deltaTime, 0.15f, 0.4f) / 2.0f;
+        acceleration = Vector3.Lerp(acceleration, newAcceleration, Time.deltaTime);
+
         velocity += acceleration * Time.deltaTime;
-        float speed = velocity.magnitude;
-        if (speed > maxSpeed)
+        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+
+        Vector3 globalUp = new Vector3(0, 0.2f, 0);
+        Vector3 accelUp = acceleration * 0.05f;
+        Vector3 bankUp = accelUp + globalUp;
+        Vector3 tempUp = transform.up;
+        tempUp = Vector3.Lerp(tempUp, bankUp, Time.deltaTime * 3);
+
+        if (velocity.magnitude > 0.0001f)
         {
-            velocity.Normalize();            
-            velocity *= maxSpeed;
+            transform.LookAt(transform.position + velocity, tempUp);
+            velocity *= (1.0f - (damping * Time.deltaTime));
         }
         transform.position += velocity * Time.deltaTime;
-        // Make the object point in the direction it's moving..
-        if (speed > float.Epsilon)
-        {
-            transform.forward = velocity;
-        }
-        force = Vector3.zero;	    
-	}
+    }
 }
