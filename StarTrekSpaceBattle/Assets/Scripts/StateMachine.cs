@@ -1,38 +1,76 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
-public class StateMachine:MonoBehaviour
+public abstract class State
 {
-    State currentState;
+    public StateMachine owner;
+    public Boid boid;
+    public virtual void Enter() { }
+    public virtual void Exit() { }
+    public virtual void Think() { }
 
-    void Start()
+}
+
+public class StateMachine : MonoBehaviour {
+
+    public State currentState;
+    public State previousState;
+
+    private IEnumerator coroutine;
+
+    public int updatesPerSecond = 5;
+
+    private void OnEnable()
     {
+        StartCoroutine(Think());
     }
 
-    public void Update()
+    public void ChangeStateDelayed(State newState, float delay)
     {
-        if (currentState != null)
+        //coroutine = ChangeStateCoRoutine(newState, delay);
+        StartCoroutine(coroutine);
+    }
+
+    public void CancelDelayedStateChange()
+    {
+        if (coroutine != null)
         {
-            Debug.Log("Current state: " + currentState.Description());
-            currentState.Update();
+            StopCoroutine(coroutine);
         }
     }
 
-    public void SwitchState(State newState)
+    //IEnumerator ChangeStateCoRoutine(State newState, float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+    //    ChangeState(newState);
+    //}
+
+    //public void RevertToPreviousState()
+    //{
+    //    ChangeState(previousState);
+    //}
+
+    public void ChangeState(State newState, Boid boid)
     {
+        previousState = currentState;
         if (currentState != null)
         {
             currentState.Exit();
         }
-
         currentState = newState;
-        if (newState != null)
+        currentState.owner = this;
+        currentState.boid = boid;
+        currentState.Enter();
+    }
+
+    System.Collections.IEnumerator Think()
+    {
+        yield return new WaitForSeconds(Random.Range(0, 0.5f));
+        while (true)
         {
-            currentState.Enter();
+            currentState.Think();
+            yield return new WaitForSeconds(1.0f / (float)updatesPerSecond);
         }
     }
 }
-
