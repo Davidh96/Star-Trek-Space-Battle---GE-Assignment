@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.014713736, g: 0.009273979, b: 0.0048887725, a: 1}
+  m_IndirectSpecularColor: {r: 0.01475298, g: 0.009245346, b: 0.004909975, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4981779271256640, guid: 0ef63af5fbf43c945ad77c4f3d5e0688, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -62.1
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4981779271256640, guid: 0ef63af5fbf43c945ad77c4f3d5e0688, type: 2}
       propertyPath: m_LocalPosition.y
@@ -214,7 +214,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4981779271256640, guid: 0ef63af5fbf43c945ad77c4f3d5e0688, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -43.4
+      value: -37.24
       objectReference: {fileID: 0}
     - target: {fileID: 4981779271256640, guid: 0ef63af5fbf43c945ad77c4f3d5e0688, type: 2}
       propertyPath: m_LocalRotation.x
@@ -348,22 +348,6 @@ MonoBehaviour:
   active: 1
   targetGameObject: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
---- !u!114 &1430408941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1430408937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e61c2651aaac8408585d2c0a29eb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  boid: {fileID: 0}
-  active: 1
-  target: {fileID: 1444383902}
 --- !u!114 &1430408942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,8 +421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce58027b93e0040998ced3755d1856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1813588410114432, guid: fb57ceb693d59714e91bc13006244897,
+  bulletPrefab: {fileID: 1984714152141324, guid: fb57ceb693d59714e91bc13006244897,
     type: 2}
+  enemy: {fileID: 1444383900}
   fireRate: 3
 --- !u!1 &1444383900 stripped
 GameObject:
@@ -679,7 +664,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4046451228783884, guid: 0a1921ea17c1f454689f96e10f8d6bee, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 51.7
+      value: 72.5
       objectReference: {fileID: 0}
     - target: {fileID: 4046451228783884, guid: 0a1921ea17c1f454689f96e10f8d6bee, type: 2}
       propertyPath: m_LocalRotation.x
