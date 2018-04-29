@@ -39,6 +39,16 @@ GameObject:
   - component: {fileID: 4046451228783884}
   - component: {fileID: 65062577686309400}
   - component: {fileID: 54795810891298852}
+  - component: {fileID: 114582384848678606}
+  - component: {fileID: 114184845959079812}
+  - component: {fileID: 114401753003254554}
+  - component: {fileID: 114565779839408730}
+  - component: {fileID: 114587275840292718}
+  - component: {fileID: 114229108251674956}
+  - component: {fileID: 114174742868587146}
+  - component: {fileID: 114785852359156274}
+  - component: {fileID: 114055344885146652}
+  - component: {fileID: 114349714716497624}
   m_Layer: 11
   m_Name: Enterprise
   m_TagString: Untagged
@@ -115,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143915778072030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 72.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4603203285630542}
@@ -249,6 +259,181 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114055344885146652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e591be6d34c50f14db45c55597ff1dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 2
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  frequency: 1
+  amplitude: 30
+  radius: 10
+  distance: 15
+  direction: 0
+--- !u!114 &114174742868587146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e61c2651aaac8408585d2c0a29eb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  target: {fileID: 0}
+  bulletSpawner: {fileID: 0}
+  bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
+    type: 2}
+  fireRate: 1
+--- !u!114 &114184845959079812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3af02336385c7419fe1b6a3bda1662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114229108251674956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893a6104f0e7c4f45b0a28d9c2dd5654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  deceleration: 0.9
+  targetGameObject: {fileID: 0}
+--- !u!114 &114349714716497624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db368f4e3c15b4386d7c6a2146db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  path: {fileID: 0}
+--- !u!114 &114401753003254554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539731130ae73804ca459d63a515242d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updatesPerSecond: 5
+--- !u!114 &114565779839408730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38360c9e33028934e820e15a0ce6f1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  scale: 10
+  forwardFeelerDepth: 5
+  sideFeelerDepth: 5
+  frontFeelerUpdatesPerSecond: 5
+  sideFeelerUpdatesPerSecond: 5
+  feelerRadius: 10
+  forceType: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &114582384848678606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d281ea93fb834b80f5e6fce646157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  damping: 0.01
+  maxSpeed: 5
+  maxForce: 10
+  explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
+--- !u!114 &114587275840292718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0485bdedf8544d4fbc1a09c82d8e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  targetGameObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 100}
+--- !u!114 &114785852359156274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7396c68e23d3c4f80ea382427cef48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  leader: {fileID: 0}
 --- !u!198 &198305095778862276
 ParticleSystem:
   m_ObjectHideFlags: 1
