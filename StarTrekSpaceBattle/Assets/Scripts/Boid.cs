@@ -13,6 +13,8 @@ public class Boid : MonoBehaviour {
     public float maxSpeed = 5.0f;
     public float maxForce = 10.0f;
 
+    public GameObject explosion;
+
 
 
     // Use this for initialization
@@ -116,7 +118,7 @@ public class Boid : MonoBehaviour {
         Debug.Log("Entered!!");
         if (other.CompareTag("Bullet"))
         {
-            
+            Instantiate(explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }

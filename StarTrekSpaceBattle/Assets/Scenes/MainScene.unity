@@ -331,6 +331,7 @@ MonoBehaviour:
   damping: 0.01
   maxSpeed: 70
   maxForce: 70
+  explosion: {fileID: 0}
 --- !u!114 &1430408939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +485,7 @@ MonoBehaviour:
   damping: 0.01
   maxSpeed: 50
   maxForce: 50
+  explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
 --- !u!114 &1444383903
 MonoBehaviour:
   m_ObjectHideFlags: 0
