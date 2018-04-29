@@ -106,4 +106,18 @@ public class Boid : MonoBehaviour {
         transform.position += velocity * Time.deltaTime;        
 	}
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Entered111!!");
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        Debug.Log("Entered!!");
+        if (other.CompareTag("Bullet"))
+        {
+            
+            Destroy(this.gameObject);
+        }
+    }
 }

@@ -13,7 +13,7 @@ public class BulletController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(0, 0, speed * Time.deltaTime);
+        transform.Translate(0, speed * Time.deltaTime, 0);
 	}
 
     void KillMe()

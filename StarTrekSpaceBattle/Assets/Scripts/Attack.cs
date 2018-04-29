@@ -17,17 +17,18 @@ public class Attack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
-        Vector3 directionToTarget = enemy.transform.position - transform.position;
-        float angle = Vector3.Angle(transform.forward, directionToTarget);
-        if (Mathf.Abs(angle) < 25)
+        if (enemy != null)
         {
-            if (allowFire)
+            Vector3 directionToTarget = enemy.transform.position - transform.position;
+            float angle = Vector3.Angle(transform.forward, directionToTarget);
+            if (Mathf.Abs(angle) < 25)
             {
-                StartCoroutine(Fire());
+                if (allowFire)
+                {
+                    StartCoroutine(Fire());
+                }
+                //Debug.Log("target is in front of me");
             }
-            Debug.Log("target is in front of me");
         }
 
     }
@@ -40,7 +41,7 @@ public class Attack : MonoBehaviour {
         //fire bullets 
         for (int i = 0; i < fireRate; i++)
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Instantiate(bulletPrefab, transform.position,bulletPrefab.transform.rotation);
             yield return new WaitForSeconds(1 / fireRate);
         }
 

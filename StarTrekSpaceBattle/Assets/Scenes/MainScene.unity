@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01475298, g: 0.009245346, b: 0.004909975, a: 1}
+  m_IndirectSpecularColor: {r: 0.014713736, g: 0.009273979, b: 0.0048887725, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -331,6 +331,26 @@ MonoBehaviour:
   damping: 0.01
   maxSpeed: 70
   maxForce: 70
+--- !u!114 &1430408939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430408937}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e591be6d34c50f14db45c55597ff1dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 10
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  frequency: 0.05
+  amplitude: 30
+  radius: 50
+  distance: 15
+  direction: 0
 --- !u!114 &1430408940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce58027b93e0040998ced3755d1856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1984714152141324, guid: fb57ceb693d59714e91bc13006244897,
+  bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
     type: 2}
   enemy: {fileID: 1444383900}
   fireRate: 3
@@ -512,7 +532,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444383900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23db368f4e3c15b4386d7c6a2146db9b, type: 3}
   m_Name: 
@@ -522,6 +542,18 @@ MonoBehaviour:
   boid: {fileID: 0}
   active: 1
   path: {fileID: 1587797615}
+--- !u!65 &1444383908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1444383900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 5, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1587797614
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +717,11 @@ Prefab:
     - target: {fileID: 4046451228783884, guid: 0a1921ea17c1f454689f96e10f8d6bee, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 54795810891298852, guid: 0a1921ea17c1f454689f96e10f8d6bee,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

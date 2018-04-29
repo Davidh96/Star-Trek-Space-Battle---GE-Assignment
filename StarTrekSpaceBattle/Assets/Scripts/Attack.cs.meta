@@ -5,7 +5,10 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
+      type: 2}
+  - enemy: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
