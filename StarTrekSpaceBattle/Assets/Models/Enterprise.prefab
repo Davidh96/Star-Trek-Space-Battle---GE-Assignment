@@ -273,11 +273,11 @@ MonoBehaviour:
   weight: 2
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  active: 1
-  frequency: 1
-  amplitude: 30
-  radius: 10
-  distance: 15
+  active: 0
+  frequency: 0.3
+  amplitude: 100
+  radius: 20
+  distance: 50
   direction: 0
 --- !u!114 &114174742868587146
 MonoBehaviour:
@@ -327,7 +327,7 @@ MonoBehaviour:
   active: 1
   targetPosition: {x: 0, y: 0, z: 0}
   slowingDistance: 15
-  deceleration: 0.9
+  deceleration: 1
   targetGameObject: {fileID: 0}
 --- !u!114 &114349714716497624
 MonoBehaviour:
@@ -397,8 +397,8 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  damping: 0.01
-  maxSpeed: 5
+  damping: 1
+  maxSpeed: 10
   maxForce: 10
   explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
 --- !u!114 &114587275840292718
@@ -415,9 +415,9 @@ MonoBehaviour:
   weight: 1
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
-  active: 1
+  active: 0
   targetGameObject: {fileID: 0}
-  target: {x: 0, y: 0, z: 100}
+  target: {x: -42.3911, y: 19.540081, z: 58.635742}
 --- !u!114 &114785852359156274
 MonoBehaviour:
   m_ObjectHideFlags: 1

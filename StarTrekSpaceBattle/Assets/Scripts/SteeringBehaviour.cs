@@ -23,10 +23,10 @@ public abstract class SteeringBehaviour:MonoBehaviour
 
     public void SetActive(bool b)
     {
-        Debug.Log("Here!");
+        //Debug.Log("Here!");
         active = b;
         enabled = b;
-        Debug.Log("Here2!");
+        //Debug.Log("Here2!");
     }
 
     public abstract Vector3 Calculate();

@@ -42,7 +42,11 @@ class ArriveAtTarget : State
 
     public override void Think()
     {
-
+        //Debug.Log("Thinking!");
+        if (Vector3.Distance(arrive.targetGameObject.transform.position, boid.transform.position) < Random.Range(30,75))
+        {
+            boid.GetComponent<StateMachine>().ChangeState(new OffsetPursueTarget(), boid);
+        }
     }
 }
 
@@ -76,10 +80,6 @@ class OffsetPursueTarget : State
     {
         Debug.Log("Entering Offset Pursue Mode!");
         offsetPursue = boid.GetComponent<OffsetPursue>();
-        if (offsetPursue != null)
-        {
-            Debug.Log("Nope111!");
-        }
         offsetPursue.SetActive(true);
     }
 
@@ -122,7 +122,7 @@ class HarmonicMovementState : State
 
     public override void Enter()
     {
-        Debug.Log("Entering Offset Pursue Mode!");
+        Debug.Log("Entering Harmonic Movement Mode!");
         movement = boid.GetComponent<HarmonicMovement>();
         movement.SetActive(true);
     }
@@ -144,7 +144,23 @@ public class ShipController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //GetComponent<StateMachine>().ChangeState(new HarmonicMovementState(),this.gameObject.GetComponent<Boid>());
+        if (this.CompareTag("FleetLeader"))
+        {
+            //GetComponent<Seek>().target = 
+            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0, 0, 200);
+            GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
+        }
+        else
+        {
+            GetComponent<StateMachine>().ChangeState(new HarmonicMovementState(), this.gameObject.GetComponent<Boid>());
+            Invoke("MoveOut", 5);
+        }
+    }
+
+    void MoveOut()
+    {
+        GetComponent<Arrive>().targetGameObject = GameObject.FindGameObjectWithTag("FleetLeader");
+        GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
     }
 
     // Update is called once per frame

@@ -38,11 +38,11 @@ public class Boid : MonoBehaviour {
 
     public Vector3 ArriveForce(Vector3 target, float slowingDistance = 15.0f, float deceleration = 1.0f)
     {
-        Debug.Log("here 2222");
+        //Debug.Log("here 2222");
         Vector3 toTarget = target - transform.position;
 
         float distance = toTarget.magnitude;
-        if (distance == 0)
+        if (distance < 50)
         {
             return Vector3.zero;
         }
@@ -66,11 +66,13 @@ public class Boid : MonoBehaviour {
     Vector3 Calculate()
     {
         force = Vector3.zero;
+        //Debug.Log(force.ToString());
         
         foreach (SteeringBehaviour b in behaviours)
         {
             if (b.isActiveAndEnabled)
             {
+                //Debug.Log("Heyo!");
                 Vector3 behaviourForce = b.Calculate() * b.weight;
                 bool full = AccumulateForce(ref force, ref behaviourForce);
                 if (full)
@@ -92,6 +94,8 @@ public class Boid : MonoBehaviour {
         float smoothRate = Mathf.Clamp(9.0f * Time.deltaTime, 0.15f, 0.4f) / 2.0f;
         acceleration = Vector3.Lerp(acceleration, newAcceleration, Time.deltaTime);
 
+       // Debug.Log(acceleration);
+
         velocity += acceleration * Time.deltaTime;
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
 
@@ -106,12 +110,13 @@ public class Boid : MonoBehaviour {
             transform.LookAt(transform.position + velocity, tempUp);
             velocity *= (1.0f - (damping * Time.deltaTime));
         }
+
         transform.position += velocity * Time.deltaTime;        
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entered111!!");
+        //Debug.Log("Entered111!!");
     }
     private void OnTriggerEnter(Collider other)
     {

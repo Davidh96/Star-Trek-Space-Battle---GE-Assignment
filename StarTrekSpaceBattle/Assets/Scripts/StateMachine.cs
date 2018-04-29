@@ -23,6 +23,7 @@ public class StateMachine : MonoBehaviour {
 
     private void OnEnable()
     {
+        //Debug.Log("Enabled!");
         StartCoroutine(Think());
     }
 
@@ -53,24 +54,32 @@ public class StateMachine : MonoBehaviour {
 
     public void ChangeState(State newState, Boid boid)
     {
-        previousState = currentState;
+        //Debug.Log("Changing State");
+
         if (currentState != null)
         {
+            previousState = currentState;
             currentState.Exit();
         }
         currentState = newState;
         currentState.owner = this;
         currentState.boid = boid;
         currentState.Enter();
+
+       
     }
 
     System.Collections.IEnumerator Think()
     {
+        
         yield return new WaitForSeconds(Random.Range(0, 0.5f));
         while (true)
         {
+            //Debug.Log("tHINKING HERE");
+
             if (currentState != null)
             {
+                //Debug.Log("tHINKING HERE");
                 currentState.Think();
             }
             yield return new WaitForSeconds(1.0f / (float)updatesPerSecond);
