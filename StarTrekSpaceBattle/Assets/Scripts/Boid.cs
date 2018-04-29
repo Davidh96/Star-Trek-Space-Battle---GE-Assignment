@@ -38,6 +38,7 @@ public class Boid : MonoBehaviour {
 
     public Vector3 ArriveForce(Vector3 target, float slowingDistance = 15.0f, float deceleration = 1.0f)
     {
+        Debug.Log("here 2222");
         Vector3 toTarget = target - transform.position;
 
         float distance = toTarget.magnitude;

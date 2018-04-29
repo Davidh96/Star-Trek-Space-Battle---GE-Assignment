@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4224409201272650}
   - component: {fileID: 33813452930512982}
   - component: {fileID: 23764262126463908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: radiator21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4276602244272402}
   - component: {fileID: 33395441120487018}
   - component: {fileID: 23553069125346416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4292188959099542}
   - component: {fileID: 33402470340356512}
   - component: {fileID: 23045024850568206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4626202157086444}
   - component: {fileID: 33811564435558486}
   - component: {fileID: 23195040169346264}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BOP-flat-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4359252562399592}
   - component: {fileID: 33978081322120806}
   - component: {fileID: 23844389043535652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: vent-grey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4179252678152280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop3-b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056004582013194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4982357930634650}
   - component: {fileID: 33119204312208792}
   - component: {fileID: 23450496109166954}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: radiator11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 4439365663376328}
   - component: {fileID: 33515209877879340}
   - component: {fileID: 23610806472586314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wing-rear-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 4069103055932052}
   - component: {fileID: 33288441622429354}
   - component: {fileID: 23272326985250760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: inner-cool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 4386368611623082}
   - component: {fileID: 33146850597413170}
   - component: {fileID: 23911741602108128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: inner-coo2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 4969936588809752}
   - component: {fileID: 33720455262821676}
   - component: {fileID: 23421573473184870}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gun-metal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4444378487178876}
   - component: {fileID: 33532900731632332}
   - component: {fileID: 23627240482909054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red-windo-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 4044554965245178}
   - component: {fileID: 33378926201145692}
   - component: {fileID: 23793980591806196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red-glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4491421178503718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 4709200504683840}
   - component: {fileID: 33649854134334524}
   - component: {fileID: 23364936350155478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,8 +287,23 @@ GameObject:
   - component: {fileID: 4015859337558818}
   - component: {fileID: 33579739687319368}
   - component: {fileID: 23013400285158682}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1166991199662532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4801273403476596}
+  m_Layer: 0
+  m_Name: BulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +319,7 @@ GameObject:
   - component: {fileID: 4034980556894098}
   - component: {fileID: 33409725076789700}
   - component: {fileID: 23856955477773388}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'rust #3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4069339976394286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +351,7 @@ GameObject:
   - component: {fileID: 4709719519990390}
   - component: {fileID: 33847117149987290}
   - component: {fileID: 23382047187532870}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +368,7 @@ GameObject:
   - component: {fileID: 4310647207470824}
   - component: {fileID: 33527319931486512}
   - component: {fileID: 23202800052675088}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Metal2 #2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +385,7 @@ GameObject:
   - component: {fileID: 4857258085344438}
   - component: {fileID: 33402156161733832}
   - component: {fileID: 23531805612651648}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wht-light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +402,7 @@ GameObject:
   - component: {fileID: 4535316832718704}
   - component: {fileID: 33250761634568490}
   - component: {fileID: 23572629655408156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lt-grey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +419,7 @@ GameObject:
   - component: {fileID: 4835658578227770}
   - component: {fileID: 33346957501803288}
   - component: {fileID: 23267760525408976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'rust #2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +434,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4670574082760404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +451,7 @@ GameObject:
   - component: {fileID: 4319109958507700}
   - component: {fileID: 33621177359045236}
   - component: {fileID: 23415947178883370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wht-light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +468,7 @@ GameObject:
   - component: {fileID: 4483313073699758}
   - component: {fileID: 33255008251864412}
   - component: {fileID: 23989942995427446}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-cut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +485,7 @@ GameObject:
   - component: {fileID: 4022557791897176}
   - component: {fileID: 33478724066672612}
   - component: {fileID: 23628645193476934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Metal2 #3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +502,7 @@ GameObject:
   - component: {fileID: 4603891509508480}
   - component: {fileID: 33823440598691086}
   - component: {fileID: 23406407284906840}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +519,7 @@ GameObject:
   - component: {fileID: 4725380858711224}
   - component: {fileID: 33506427458823710}
   - component: {fileID: 23453237381936186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gun-metal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +536,7 @@ GameObject:
   - component: {fileID: 4722196222369216}
   - component: {fileID: 33810035489066756}
   - component: {fileID: 23739074540467338}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +553,7 @@ GameObject:
   - component: {fileID: 4195411915311622}
   - component: {fileID: 33998822745870738}
   - component: {fileID: 23613383400114568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: radiator2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +570,7 @@ GameObject:
   - component: {fileID: 4446646980238018}
   - component: {fileID: 33845343262978920}
   - component: {fileID: 23311316174424154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow-glo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +587,7 @@ GameObject:
   - component: {fileID: 4072177153367090}
   - component: {fileID: 33830804169072218}
   - component: {fileID: 23817809570071086}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cut-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +604,7 @@ GameObject:
   - component: {fileID: 4544326438112600}
   - component: {fileID: 33694077901370044}
   - component: {fileID: 23434550397693872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +621,7 @@ GameObject:
   - component: {fileID: 4348411477203404}
   - component: {fileID: 33496664775359132}
   - component: {fileID: 23840464395690216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Metal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +638,7 @@ GameObject:
   - component: {fileID: 4161730824298896}
   - component: {fileID: 33081333965081694}
   - component: {fileID: 23802447477995970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'metal3 #4'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +655,7 @@ GameObject:
   - component: {fileID: 4517314617712244}
   - component: {fileID: 33549292816925202}
   - component: {fileID: 23037778955738836}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: inner-coo1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +670,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4873769573574790}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lightwave.target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +687,7 @@ GameObject:
   - component: {fileID: 4339593323887804}
   - component: {fileID: 33418417971945244}
   - component: {fileID: 23448223637323434}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: radiator1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +704,7 @@ GameObject:
   - component: {fileID: 4072648872895588}
   - component: {fileID: 33219958169783114}
   - component: {fileID: 23290179356017844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +721,7 @@ GameObject:
   - component: {fileID: 4067538664186926}
   - component: {fileID: 33702143695235630}
   - component: {fileID: 23777626713743612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: metal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +738,7 @@ GameObject:
   - component: {fileID: 4699946940765380}
   - component: {fileID: 33883596136992004}
   - component: {fileID: 23218474232582206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: inner-coo3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +755,7 @@ GameObject:
   - component: {fileID: 4125337385694382}
   - component: {fileID: 33212568960007508}
   - component: {fileID: 23190209602908152}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gun-metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +772,7 @@ GameObject:
   - component: {fileID: 4025311451284826}
   - component: {fileID: 33307134297449412}
   - component: {fileID: 23162513282998092}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'rust #4'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +789,7 @@ GameObject:
   - component: {fileID: 4995352193986850}
   - component: {fileID: 33401042824184532}
   - component: {fileID: 23660728044851006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +806,7 @@ GameObject:
   - component: {fileID: 4947840167431590}
   - component: {fileID: 33365157936994172}
   - component: {fileID: 23214206642851542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red-window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +821,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4753279762594414}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lightwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +838,7 @@ GameObject:
   - component: {fileID: 4083956459720628}
   - component: {fileID: 33722133141502076}
   - component: {fileID: 23183941303065218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +855,7 @@ GameObject:
   - component: {fileID: 4435761677780234}
   - component: {fileID: 33512647453332510}
   - component: {fileID: 23891996650650922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gunshipgr1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +870,20 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4981779271256640}
-  m_Layer: 0
+  - component: {fileID: 65335624932058950}
+  - component: {fileID: 23218829329823816}
+  - component: {fileID: 54354034635647164}
+  - component: {fileID: 114851009419089476}
+  - component: {fileID: 114276226556905054}
+  - component: {fileID: 114914202836664528}
+  - component: {fileID: 114803914464046402}
+  - component: {fileID: 114230140889521952}
+  - component: {fileID: 114745206096384714}
+  - component: {fileID: 114266761560613326}
+  - component: {fileID: 114467481142350676}
+  - component: {fileID: 114401279631204818}
+  - component: {fileID: 114937098866627526}
+  m_Layer: 10
   m_Name: BirdOfPrey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +900,7 @@ GameObject:
   - component: {fileID: 4040986916146438}
   - component: {fileID: 33476305284382376}
   - component: {fileID: 23012960163512574}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +917,7 @@ GameObject:
   - component: {fileID: 4580550847443508}
   - component: {fileID: 33483068442430058}
   - component: {fileID: 23024285453596308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: photon-red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +934,7 @@ GameObject:
   - component: {fileID: 4095215437375818}
   - component: {fileID: 33091580644593568}
   - component: {fileID: 23347982611076944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'metal3 #3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +949,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4642223701797310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +966,7 @@ GameObject:
   - component: {fileID: 4571982787279970}
   - component: {fileID: 33285926024790262}
   - component: {fileID: 23616377647119710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: flat-blk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +983,7 @@ GameObject:
   - component: {fileID: 4572566858216318}
   - component: {fileID: 33572413531219220}
   - component: {fileID: 23457641805534742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +1000,7 @@ GameObject:
   - component: {fileID: 4921528619274978}
   - component: {fileID: 33241750985589112}
   - component: {fileID: 23148574053909560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +1017,7 @@ GameObject:
   - component: {fileID: 4782186118000878}
   - component: {fileID: 33361318152543552}
   - component: {fileID: 23947805552559098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Metal2 #4'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1034,7 @@ GameObject:
   - component: {fileID: 4152604362610922}
   - component: {fileID: 33168815201795144}
   - component: {fileID: 23014902349480302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'red-glow #'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1021,7 +1049,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4300743640432258}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1066,7 @@ GameObject:
   - component: {fileID: 4873713236932104}
   - component: {fileID: 33135903106292630}
   - component: {fileID: 23900423847458986}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BOP-flat-r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1083,7 @@ GameObject:
   - component: {fileID: 4815140023082246}
   - component: {fileID: 33228974208853040}
   - component: {fileID: 23502537731825372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gunshipgry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1100,7 @@ GameObject:
   - component: {fileID: 4836925766077542}
   - component: {fileID: 33506123517338428}
   - component: {fileID: 23452148204308566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1117,7 @@ GameObject:
   - component: {fileID: 4063881076907428}
   - component: {fileID: 33825576388639026}
   - component: {fileID: 23318222862089276}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sidegrncut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,7 +1134,7 @@ GameObject:
   - component: {fileID: 4725090974792522}
   - component: {fileID: 33243557669004854}
   - component: {fileID: 23057138964411146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1151,7 @@ GameObject:
   - component: {fileID: 4508222878859150}
   - component: {fileID: 33387822886126760}
   - component: {fileID: 23962969448760020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1168,7 @@ GameObject:
   - component: {fileID: 4031745091286656}
   - component: {fileID: 33220488308661038}
   - component: {fileID: 23952381958504118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-green5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1157,7 +1185,7 @@ GameObject:
   - component: {fileID: 4159741738997546}
   - component: {fileID: 33405055193957470}
   - component: {fileID: 23057392939537798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sidegrn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1202,7 @@ GameObject:
   - component: {fileID: 4060142881035290}
   - component: {fileID: 33654629895868950}
   - component: {fileID: 23904387127814436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1191,7 +1219,7 @@ GameObject:
   - component: {fileID: 4829209656997882}
   - component: {fileID: 198387333954552270}
   - component: {fileID: 199236327604765308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1236,7 @@ GameObject:
   - component: {fileID: 4338927615358568}
   - component: {fileID: 33426984308891540}
   - component: {fileID: 23968901722626492}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1253,7 @@ GameObject:
   - component: {fileID: 4674723877288496}
   - component: {fileID: 33913458167668864}
   - component: {fileID: 23117344981858324}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: photon-re1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1270,7 @@ GameObject:
   - component: {fileID: 4042316174995388}
   - component: {fileID: 33325057702364148}
   - component: {fileID: 23349783245605102}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: marker-lig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1287,7 @@ GameObject:
   - component: {fileID: 4976982812414502}
   - component: {fileID: 33158267794065022}
   - component: {fileID: 23256784539602636}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'metal3 #2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1276,7 +1304,7 @@ GameObject:
   - component: {fileID: 4934210927425798}
   - component: {fileID: 33617498200144190}
   - component: {fileID: 23634522690967710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: marker-li1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1291,7 +1319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4761461712840048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'bop5 #2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1336,7 @@ GameObject:
   - component: {fileID: 4691546985987098}
   - component: {fileID: 33870728921562910}
   - component: {fileID: 23969511953651748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bop-gree11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1323,7 +1351,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4323888749005562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ship-modlz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,6 +2266,19 @@ Transform:
   m_Father: {fileID: 4642223701797310}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4801273403476596
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1166991199662532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.028999329, y: 0.679, z: 8.279999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4981779271256640}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4815140023082246
 Transform:
   m_ObjectHideFlags: 1
@@ -2258,7 +2299,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873902414379362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.56, z: -1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4981779271256640}
@@ -2401,11 +2442,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683288670500172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.1, y: 0, z: -43.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4670574082760404}
   - {fileID: 4829209656997882}
+  - {fileID: 4801273403476596}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2994,6 +3036,40 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100094, guid: 10fbddc2ed6b7b641ab52ad248908589, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23218829329823816
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5141,6 +5217,208 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388775928727672}
   m_Mesh: {fileID: 4300004, guid: 10fbddc2ed6b7b641ab52ad248908589, type: 3}
+--- !u!54 &54354034635647164
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65335624932058950
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 2}
+--- !u!114 &114230140889521952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0485bdedf8544d4fbc1a09c82d8e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  targetGameObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 100}
+--- !u!114 &114266761560613326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e61c2651aaac8408585d2c0a29eb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  target: {fileID: 0}
+  bulletSpawner: {fileID: 1166991199662532}
+  bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
+    type: 2}
+  fireRate: 1
+--- !u!114 &114276226556905054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3af02336385c7419fe1b6a3bda1662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114401279631204818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e591be6d34c50f14db45c55597ff1dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 2
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  frequency: 1
+  amplitude: 30
+  radius: 10
+  distance: 15
+  direction: 0
+--- !u!114 &114467481142350676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7396c68e23d3c4f80ea382427cef48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  leader: {fileID: 0}
+--- !u!114 &114745206096384714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893a6104f0e7c4f45b0a28d9c2dd5654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 15
+  deceleration: 0.9
+  targetGameObject: {fileID: 0}
+--- !u!114 &114803914464046402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38360c9e33028934e820e15a0ce6f1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  scale: 10
+  forwardFeelerDepth: 5
+  sideFeelerDepth: 5
+  frontFeelerUpdatesPerSecond: 5
+  sideFeelerUpdatesPerSecond: 5
+  feelerRadius: 10
+  forceType: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &114851009419089476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034d281ea93fb834b80f5e6fce646157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  damping: 0.01
+  maxSpeed: 5
+  maxForce: 10
+  explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
+--- !u!114 &114914202836664528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539731130ae73804ca459d63a515242d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updatesPerSecond: 5
+--- !u!114 &114937098866627526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683288670500172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db368f4e3c15b4386d7c6a2146db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  path: {fileID: 0}
 --- !u!198 &198387333954552270
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -5148,7 +5426,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873902414379362}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   looping: 1
@@ -5201,14 +5479,14 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -878229194
+  randomSeed: 589783936
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5249,7 +5527,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5353,7 +5631,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5650,9 +5928,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: -1}
+    m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 180, z: 0}
-    m_Scale: {x: 0.5, y: 0.5, z: 0.5}
+    m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -5663,7 +5941,7 @@ ParticleSystem:
     m_UseMeshColors: 1
     alignToDirection: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0
+    sphericalDirectionAmount: 0.05
     randomPositionAmount: 0
     radius:
       value: 1
@@ -5761,7 +6039,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5802,7 +6080,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5843,7 +6121,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -5854,15 +6132,15 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 1
+          value: 0
           inSlope: 0
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
         - serializedVersion: 2
           time: 1
-          value: 0
+          value: 1
           inSlope: 1
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -6055,7 +6333,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 3.1415925
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -6467,7 +6745,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   ForceModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -6553,7 +6831,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -5
+      scalar: -2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6591,7 +6869,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    inWorldSpace: 0
+    inWorldSpace: 1
     randomizePerFrame: 0
   ExternalForcesModule:
     enabled: 0
@@ -7241,18 +7519,18 @@ ParticleSystem:
         - serializedVersion: 2
           time: 0
           value: 0
-          inSlope: 0
-          outSlope: 1
+          inSlope: 6.2119365
+          outSlope: 6.2119365
           tangentMode: 0
         - serializedVersion: 2
           time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
+          value: 0.12501526
+          inSlope: -5.5451155
+          outSlope: -5.5451155
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 4
+        m_RotationOrder: 0
       minCurve:
         serializedVersion: 2
         m_Curve:
@@ -7353,7 +7631,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    range: {x: 0, y: 1}
+    range: {x: 0, y: 5}
     separateAxes: 0
   RotationBySpeedModule:
     enabled: 0
@@ -7811,13 +8089,13 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 0
+    enabled: 1
     mode: 0
-    ratio: 1
+    ratio: 0.7
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7867,7 +8145,7 @@ ParticleSystem:
     splitSubEmitterRibbons: 0
     colorOverLifetime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
@@ -8517,8 +8795,8 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

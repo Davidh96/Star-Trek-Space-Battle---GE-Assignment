@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using System.Collections;
 
 public class Pursue : SteeringBehaviour
 {
     public Boid target;
     Vector3 targetPos;
+    public GameObject bulletSpawner;
+
+    public GameObject bulletPrefab;
+    bool allowFire = true;
+    public int fireRate = 1;
 
     public void Start()
     {
@@ -34,8 +40,36 @@ public class Pursue : SteeringBehaviour
             targetPos = target.transform.position
                 + (time * target.velocity);
 
+            Vector3 directionToTarget = target.transform.position - transform.position;
+            float angle = Vector3.Angle(transform.forward, directionToTarget);
+            if (Mathf.Abs(angle) < 25)
+            {
+                if (allowFire)
+                {
+                    StartCoroutine(Fire());
+                }
+                //Debug.Log("target is in front of me");
+            }
+
             return boid.SeekForce(targetPos);
         }
         return new Vector3();
+    }
+
+
+    IEnumerator Fire()
+    {
+
+
+        allowFire = false;
+        //fire bullets 
+        for (int i = 0; i < fireRate; i++)
+        {
+            Instantiate(bulletPrefab, bulletSpawner.transform.position, transform.rotation);
+            yield return new WaitForSeconds(1 / fireRate);
+        }
+
+        yield return new WaitForSeconds(1);
+        allowFire = true;
     }
 }

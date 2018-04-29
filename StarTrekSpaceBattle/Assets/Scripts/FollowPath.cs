@@ -23,13 +23,15 @@ public class FollowPath : SteeringBehaviour {
 
         return boid.SeekForce(target);
 
-
     }
 
     private void OnDrawGizmos()
     {
-        Vector3 nextNode = path.NextNode();
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, nextNode);
+        if (path != null)
+        {
+            Vector3 nextNode = path.NextNode();
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, nextNode);
+        }
     }
 }
