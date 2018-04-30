@@ -45,6 +45,7 @@ class ArriveAtTarget : State
         //Debug.Log("Thinking!");
         if (Vector3.Distance(arrive.targetGameObject.transform.position, boid.transform.position) < Random.Range(30,75))
         {
+            boid.GetComponent<OffsetPursue>().leader = GameObject.FindGameObjectWithTag("FleetLeader").GetComponent<Boid>();
             boid.GetComponent<StateMachine>().ChangeState(new OffsetPursueTarget(), boid);
         }
     }
