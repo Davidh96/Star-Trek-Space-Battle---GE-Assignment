@@ -123,7 +123,7 @@ public class Boid : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("Entered!!");
+        //Debug.Log("Entered!!");
         if (other.CompareTag("Bullet"))
         {
             StartCoroutine(takeDamage());

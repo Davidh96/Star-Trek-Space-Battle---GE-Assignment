@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 114843139628492338}
   - component: {fileID: 114901354064195182}
   - component: {fileID: 114671615184994076}
+  - component: {fileID: 114521454494725732}
   m_Layer: 0
   m_Name: Runabout
   m_TagString: Runabout
@@ -221,7 +222,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978058089298480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38360c9e33028934e820e15a0ce6f1a7, type: 3}
   m_Name: 
@@ -239,7 +240,7 @@ MonoBehaviour:
   forceType: 0
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966783
 --- !u!114 &114402755184466258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,6 +261,32 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
     type: 2}
   fireRate: 1
+  shootingDistance: 300
+  shootingAngle: 25
+  stopDistance: 100
+--- !u!114 &114521454494725732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1978058089298480}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd3c850c3546a445b6d11ca5dee6664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  target: {fileID: 0}
+  bulletSpawner: {fileID: 1817334951833284}
+  bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
+    type: 2}
+  fireRate: 1
+  shootingDistance: 300
+  shootingAngle: 25
+  stopDistance: 100
 --- !u!114 &114524219748270788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,13 +333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034d281ea93fb834b80f5e6fce646157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   damping: 0.5
-  maxSpeed: 15
-  maxForce: 10
+  maxSpeed: 30
+  maxForce: 30
   explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
 --- !u!114 &114843139628492338
 MonoBehaviour:

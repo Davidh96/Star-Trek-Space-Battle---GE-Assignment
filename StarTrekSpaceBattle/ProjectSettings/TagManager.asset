@@ -12,6 +12,7 @@ TagManager:
   - Runabout
   - RunaboutLeader
   - DominionShip
+  - Path
   layers:
   - Default
   - TransparentFX

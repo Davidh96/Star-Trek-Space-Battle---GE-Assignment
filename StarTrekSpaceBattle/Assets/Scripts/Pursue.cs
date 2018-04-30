@@ -15,6 +15,9 @@ public class Pursue : SteeringBehaviour
     bool allowFire = true;
     public int fireRate = 1;
     public float shootingDistance = 300;
+    public float shootingAngle = 25;
+    public float stopDistance = 100;
+
 
     public void Start()
     {
@@ -36,37 +39,32 @@ public class Pursue : SteeringBehaviour
         if (target != null)
         {
             float dist = Vector3.Distance(target.transform.position, transform.position);
-            float time = dist / boid.maxSpeed;
-
-            targetPos = target.transform.position
-                + (time * target.velocity);
-
-            Vector3 directionToTarget = target.transform.position - transform.position;
-            float angle = Vector3.Angle(transform.forward, directionToTarget);
-            if (Mathf.Abs(angle) < 25 & dist< shootingDistance)
+            if (dist > stopDistance)
             {
-                if (allowFire)
-                {
-                    StartCoroutine(Fire());
-                }
-                //Debug.Log("target is in front of me");
-            }
+                float time = dist / boid.maxSpeed;
 
-            return boid.SeekForce(targetPos);
+                targetPos = target.transform.position
+                    + (time * target.velocity);
+
+                return boid.SeekForce(targetPos);
+            }
+            
         }
-        return new Vector3();
+        return Vector3.zero;
     }
 
 
     IEnumerator Fire()
     {
-
+        this.transform.LookAt(target.transform);
 
         allowFire = false;
         //fire bullets 
         for (int i = 0; i < fireRate; i++)
         {
             Instantiate(bulletPrefab, bulletSpawner.transform.position, transform.rotation);
+            bulletPrefab.GetComponent<Seek>().targetGameObject = target.gameObject;
+            bulletPrefab.transform.LookAt(target.transform);
             yield return new WaitForSeconds(1 / fireRate);
         }
 

@@ -15,7 +15,7 @@ public class Explosion : MonoBehaviour {
 
 		for(int i=0;i< partsCount; i++)
         {
-            Debug.Log("In loop");
+            //Debug.Log("In loop");
             Instantiate(part, transform.position, Random.rotation);
             Rigidbody rb = part.GetComponent<Rigidbody>();
             rb.AddExplosionForce(power, transform.position, radius, 3.0f);

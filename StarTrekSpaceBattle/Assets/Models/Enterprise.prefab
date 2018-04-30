@@ -295,10 +295,13 @@ MonoBehaviour:
   boid: {fileID: 0}
   active: 1
   target: {fileID: 0}
-  bulletSpawner: {fileID: 0}
+  bulletSpawner: {fileID: 1457398207389750}
   bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
     type: 2}
   fireRate: 1
+  shootingDistance: 300
+  shootingAngle: 25
+  stopDistance: 100
 --- !u!114 &114184845959079812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -381,7 +384,7 @@ MonoBehaviour:
   forceType: 0
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966783
 --- !u!114 &114582384848678606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034d281ea93fb834b80f5e6fce646157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 30
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
