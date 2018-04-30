@@ -150,7 +150,7 @@ public class ShipController : MonoBehaviour {
             ////GetComponent<Seek>().target = 
             //Vector3 ArrivePos = new Vector3(this.forward.x, Vector3.forward.y, Vector3.forward.z * 200);
             //Debug.Log(transform.TransformPoint(ArrivePos));
-            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0,0,500);
+            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0,0,300);
             GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
         }
         else

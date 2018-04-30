@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: b60b636e17b61bd4f9be9c8d0d3ce39a
+timeCreated: 1525089119
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Object01
+    100002: Object01_1
+    100004: Object03
+    100006: Object03_1
+    100008: Object04
+    100010: Object04_1
+    100012: Object05
+    100014: Object05_1
+    100016: Object06
+    100018: Object06_1
+    100020: Object07
+    100022: Object07_1
+    100024: Object08_1
+    100026: //RootNode
+    400000: Object01
+    400002: Object01_1
+    400004: Object03
+    400006: Object03_1
+    400008: Object04
+    400010: Object04_1
+    400012: Object05
+    400014: Object05_1
+    400016: Object06
+    400018: Object06_1
+    400020: Object07
+    400022: Object07_1
+    400024: Object08_1
+    400026: //RootNode
+    2100000: default#1
+    2100002: run grey
+    2100004: run dark grey
+    2100006: run mid grey
+    2100008: fan metal
+    2100010: run midlgt grey
+    2100012: runabout hull
+    2100014: run light grey
+    2100016: run darkest grey
+    2100018: run yellow
+    2100020: run grey tex
+    2100022: black matte
+    2100024: run beige
+    2100026: run side frght
+    2100028: run test
+    2100030: run test1
+    2100032: run line grey
+    2100034: nav light
+    2100036: run lett black
+    2100038: run side fleft
+    2100040: run frnt top
+    2100042: run lgt drk grey
+    2100044: runbot
+    2100046: red bits
+    2100048: gold bits
+    2100050: warp blue
+    2100052: nacelle red
+    2300000: Object01
+    2300002: Object03
+    2300004: Object04
+    2300006: Object05
+    2300008: Object06
+    2300010: Object07
+    3300000: Object01
+    3300002: Object03
+    3300004: Object04
+    3300006: Object05
+    3300008: Object06
+    3300010: Object07
+    4300000: Object03
+    4300002: Object05
+    4300004: Object01
+    4300006: Object07
+    4300008: Object06
+    4300010: Object04
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
