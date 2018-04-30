@@ -14,6 +14,7 @@ public class Pursue : SteeringBehaviour
     public GameObject bulletPrefab;
     bool allowFire = true;
     public int fireRate = 1;
+    public float shootingDistance = 300;
 
     public void Start()
     {
@@ -42,11 +43,11 @@ public class Pursue : SteeringBehaviour
 
             Vector3 directionToTarget = target.transform.position - transform.position;
             float angle = Vector3.Angle(transform.forward, directionToTarget);
-            if (Mathf.Abs(angle) < 25)
+            if (Mathf.Abs(angle) < 25 & dist< shootingDistance)
             {
                 if (allowFire)
                 {
-                    //StartCoroutine(Fire());
+                    StartCoroutine(Fire());
                 }
                 //Debug.Log("target is in front of me");
             }

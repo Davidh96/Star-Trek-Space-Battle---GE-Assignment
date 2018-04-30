@@ -91,7 +91,7 @@ class PursueTarget : State
         Debug.Log("Entering Pursue Mode!");
         pursue = boid.GetComponent<Pursue>();
         pursue.SetActive(true);
-        enemies = GameObject.FindGameObjectsWithTag("DominionShip");
+        
     }
 
     public override void Exit()
@@ -101,6 +101,7 @@ class PursueTarget : State
 
     public override void Think()
     {
+        enemies = GameObject.FindGameObjectsWithTag("DominionShip");
         enemyTarget = enemies[0];
 
         //if certain distance and target is in sight (dot product) = attackstate
@@ -112,6 +113,7 @@ class PursueTarget : State
             }
         }
 
+        boid.GetComponent<Pursue>().target = enemyTarget.GetComponent<Boid>();
 
 
     }

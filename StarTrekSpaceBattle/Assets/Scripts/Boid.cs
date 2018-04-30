@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour {
     List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
+
+    public int health = 5;
     
     public Vector3 force = Vector3.zero;
     public Vector3 acceleration = Vector3.zero;
@@ -124,8 +126,19 @@ public class Boid : MonoBehaviour {
         Debug.Log("Entered!!");
         if (other.CompareTag("Bullet"))
         {
+            StartCoroutine(takeDamage());
+        }
+    }
+
+    private IEnumerator takeDamage()
+    {
+        health--;
+        Debug.Log("Health: " + health);
+        if (health == 0)
+        {
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
+        yield return new WaitForSeconds(2);
     }
 }
