@@ -145,23 +145,32 @@ public class ShipController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if (this.CompareTag("FleetLeader"))
+        if (this.CompareTag("FleetLeader") || this.CompareTag("DominionLeader"))
         {
-            //GetComponent<Seek>().target = 
-            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0, 0, 200);
+            ////GetComponent<Seek>().target = 
+            //Vector3 ArrivePos = new Vector3(this.forward.x, Vector3.forward.y, Vector3.forward.z * 200);
+            //Debug.Log(transform.TransformPoint(ArrivePos));
+            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0,0,500);
             GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
         }
         else
         {
-            GetComponent<StateMachine>().ChangeState(new HarmonicMovementState(), this.gameObject.GetComponent<Boid>());
-            Invoke("MoveOut", 5);
+            //GetComponent<StateMachine>().ChangeState(new HarmonicMovementState(), this.gameObject.GetComponent<Boid>());
+            Invoke("MoveOut", 10);
         }
     }
 
     void MoveOut()
     {
-        GetComponent<Arrive>().targetGameObject = GameObject.FindGameObjectWithTag("FleetLeader");
-        GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
+        if (this.CompareTag("StarFleet"))
+        {
+            GetComponent<OffsetPursue>().leader = GameObject.FindGameObjectWithTag("FleetLeader").GetComponent<Boid>();
+        }
+        if (this.CompareTag("Dominion"))
+        {
+            GetComponent<OffsetPursue>().leader = GameObject.FindGameObjectWithTag("DominionLeader").GetComponent<Boid>();
+        }
+        GetComponent<StateMachine>().ChangeState(new OffsetPursueTarget(), this.gameObject.GetComponent<Boid>());
     }
 
     // Update is called once per frame

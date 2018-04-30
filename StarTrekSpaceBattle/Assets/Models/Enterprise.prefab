@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 114349714716497624}
   m_Layer: 11
   m_Name: Enterprise
-  m_TagString: Untagged
+  m_TagString: StarFleet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

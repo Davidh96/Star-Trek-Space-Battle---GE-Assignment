@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - FleetLeader
+  - Dominion
+  - StarFleet
+  - DominionLeader
   layers:
   - Default
   - TransparentFX
