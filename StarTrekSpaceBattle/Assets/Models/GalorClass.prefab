@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 4028728893252738}
   m_Layer: 0
   m_Name: GalorClass1
-  m_TagString: Dominion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 54571437284265540}
   m_Layer: 0
   m_Name: GalorClass
-  m_TagString: Dominion
+  m_TagString: DominionShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2347,7 +2347,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   damping: 1
-  maxSpeed: 10
+  maxSpeed: 15
   maxForce: 10
   explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
 --- !u!114 &114741384476060772

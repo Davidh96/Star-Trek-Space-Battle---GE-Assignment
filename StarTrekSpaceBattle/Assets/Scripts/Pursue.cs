@@ -46,7 +46,7 @@ public class Pursue : SteeringBehaviour
             {
                 if (allowFire)
                 {
-                    StartCoroutine(Fire());
+                    //StartCoroutine(Fire());
                 }
                 //Debug.Log("target is in front of me");
             }

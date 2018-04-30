@@ -28,7 +28,7 @@ public class SpawnController : MonoBehaviour {
             //euler.z = Random.rotation.y;
             //transform.eulerAngles = euler;
             
-            if (obj.CompareTag("Dominion"))
+            if (obj.CompareTag("DominionShip"))
             {
                 startRot = Quaternion.LookRotation(-transform.forward, Vector3.up);
  
@@ -62,7 +62,7 @@ public class SpawnController : MonoBehaviour {
 
             var clone = Instantiate(obj, new Vector3(transform.position.x +(20*j), transform.position.y + Random.Range(20, 100),newPos.z ),startRot );
 
-            if (obj.CompareTag("Dominion"))
+            if (obj.CompareTag("DominionShip"))
             {
                 if (randomLeader == i)
                 {

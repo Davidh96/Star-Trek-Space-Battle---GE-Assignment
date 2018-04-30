@@ -28,6 +28,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1817334951833284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4378611012130134}
+  m_Layer: 0
+  m_Name: BulletSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1978058089298480
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,11 +65,24 @@ GameObject:
   - component: {fileID: 114671615184994076}
   m_Layer: 0
   m_Name: Runabout
-  m_TagString: StarFleet
+  m_TagString: Runabout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4378611012130134
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817334951833284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4782147211112122}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4782147211112122
 Transform:
   m_ObjectHideFlags: 1
@@ -62,10 +90,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978058089298480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 73.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4818561544789162}
+  - {fileID: 4378611012130134}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,7 +256,7 @@ MonoBehaviour:
   boid: {fileID: 0}
   active: 1
   target: {fileID: 0}
-  bulletSpawner: {fileID: 0}
+  bulletSpawner: {fileID: 1817334951833284}
   bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
     type: 2}
   fireRate: 1
@@ -281,8 +310,8 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
-  damping: 1
-  maxSpeed: 10
+  damping: 0.5
+  maxSpeed: 15
   maxForce: 10
   explosion: {fileID: 1616771606128646, guid: 882519535327f2046b1b02ccf66374a3, type: 2}
 --- !u!114 &114843139628492338
@@ -323,14 +352,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e591be6d34c50f14db45c55597ff1dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 2
+  weight: 0.3
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   active: 0
   frequency: 0.3
-  amplitude: 100
-  radius: 20
-  distance: 50
+  amplitude: 10
+  radius: 10
+  distance: 20
   direction: 0
 --- !u!114 &114989085154118576
 MonoBehaviour:

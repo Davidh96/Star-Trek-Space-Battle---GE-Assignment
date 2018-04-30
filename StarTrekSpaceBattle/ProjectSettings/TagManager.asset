@@ -9,6 +9,9 @@ TagManager:
   - Dominion
   - StarFleet
   - DominionLeader
+  - Runabout
+  - RunaboutLeader
+  - DominionShip
   layers:
   - Default
   - TransparentFX
