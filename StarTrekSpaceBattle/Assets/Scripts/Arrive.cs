@@ -23,6 +23,7 @@ public class Arrive: SteeringBehaviour
     {
         if (targetGameObject != null)
         {
+            //update targets position
             targetPosition = targetGameObject.transform.position;
         }
     }

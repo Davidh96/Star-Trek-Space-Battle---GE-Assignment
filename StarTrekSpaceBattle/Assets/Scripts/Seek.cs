@@ -8,6 +8,7 @@ public class Seek : SteeringBehaviour
 {
     public GameObject targetGameObject = null;
     public Vector3 target = Vector3.zero;
+    public float stopDistance = 110;
 
     public void OnDrawGizmos()
     {
@@ -24,7 +25,16 @@ public class Seek : SteeringBehaviour
     
     public override Vector3 Calculate()
     {
-        return boid.SeekForce(target);    
+        if (this.GetComponent<Seek>().targetGameObject != null)
+        {
+            float dist = Vector3.Distance(this.GetComponent<Seek>().targetGameObject.transform.position, transform.position);
+            if (dist > stopDistance)
+            {
+                return boid.SeekForce(target);
+            }
+        }
+
+            return Vector3.zero;
     }
 
     public void Update()

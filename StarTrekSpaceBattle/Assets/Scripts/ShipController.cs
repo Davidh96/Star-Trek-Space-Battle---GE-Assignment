@@ -5,6 +5,9 @@ using UnityEngine;
 class SeekTarget : State
 {
     Seek arrive;
+    GameObject enemyTarget;
+    GameObject[] enemies;
+    float attackDistance = 110;
 
     public override void Enter()
     {
@@ -22,11 +25,46 @@ class SeekTarget : State
 
     public override void Think()
     {
-        
+        //get array of enemies
+        if (boid.gameObject.CompareTag("StarFleet"))
+        {
+            enemies = GameObject.FindGameObjectsWithTag("DominionShip");
+        }
+
+        if (boid.gameObject.CompareTag("DominionShip"))
+        {
+            enemies = GameObject.FindGameObjectsWithTag("StarFleet");
+        }
+
+        enemyTarget = enemies[0];
+
+        //if seeking target
+        if (boid.GetComponent<Seek>().targetGameObject != null)
+        {
+            //if target is close neough, attack
+            if (Vector3.Distance(boid.GetComponent<Seek>().targetGameObject.transform.position, boid.transform.position) < attackDistance)
+            {
+                boid.GetComponent<Attack>().target = boid.GetComponent<Seek>().targetGameObject.GetComponent<Boid>();
+                boid.GetComponent<StateMachine>().ChangeState(new AttackState(), boid);
+            }
+        }
+
+        //get nearby enemies
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (Vector3.Distance(enemyTarget.transform.position, boid.gameObject.transform.position) > Vector3.Distance(enemies[i].transform.position, boid.gameObject.transform.position) || boid.GetComponent<Seek>().target == null)
+            {
+                enemyTarget = enemies[i];
+            }
+        }
+
+        boid.GetComponent<Seek>().targetGameObject = enemyTarget;
 
     }
 }
 
+
+//state for arriving at a target
 class ArriveAtTarget : State
 {
     Arrive arrive;
@@ -45,60 +83,44 @@ class ArriveAtTarget : State
 
     public override void Think()
     {
-        //Debug.Log("Thinking!");
-        //if (Vector3.Distance(arrive.targetGameObject.transform.position, boid.transform.position) < Random.Range(30,75))
-        //{
-        //    boid.GetComponent<OffsetPursue>().leader = GameObject.FindGameObjectWithTag("FleetLeader").GetComponent<Boid>();
-        //    boid.GetComponent<StateMachine>().ChangeState(new OffsetPursueTarget(), boid);
-        //}
 
-        //Debug.Log(boid.force.magnitude);
-        //Debug.Log("Thinking111!");
-        if (boid.force.magnitude <= 1)
+        //if slowed down
+        if (boid.force.magnitude <= 4)
         {
-            //Debug.Log("Her4e");
+            //if a runabout
             if (boid.gameObject.CompareTag("RunaboutLeader") || boid.gameObject.CompareTag("Runabout"))
             {
                 boid.gameObject.tag = "StarFleet";
 
+                //get list of enemies
                 GameObject[] enemies = GameObject.FindGameObjectsWithTag("DominionShip");
-                Debug.Log("Number :" + enemies.Length);
+                //pick random enemy
                 int victim = Random.Range(0, enemies.Length);
-
-
-                boid.GetComponent<Pursue>().target = enemies[victim].GetComponent<Boid>();
-                boid.GetComponent<StateMachine>().ChangeState(new PursueTarget(), boid);
+                //seek enemy
+                boid.GetComponent<Seek>().targetGameObject = enemies[victim];
+                boid.GetComponent<StateMachine>().ChangeState(new SeekTarget(), boid);
                 
 
 
-            }
+            }///if star fleet leader
             if (boid.gameObject.CompareTag("FleetLeader"))
             {
-                Debug.Log("Thinking!");
-                GameObject[] fighter = GameObject.FindGameObjectsWithTag("Runabout");
-                Debug.Log("fighter count: " + fighter.Length);
-                if (fighter.Length < 2)
-                {
-                    Debug.Log("Here1111111");
+                    //start path following
                     Path path = GameObject.FindGameObjectWithTag("Path").GetComponent<Path>();
                     boid.GetComponent<FollowPath>().path = path;
                     boid.GetComponent<StateMachine>().ChangeState(new FollowPathState(), boid);
-
-                    //GameObject[] enemies = GameObject.FindGameObjectsWithTag("DominionShip");
-                    //int victim = Random.Range(0, enemies.Length);
-                    //boid.GetComponent<Pursue>().target = enemies[victim].GetComponent<Boid>();
-                    //boid.GetComponent<StateMachine>().ChangeState(new PursueTarget(), boid);
-                }
-            }
+            }//if dominion leader,
             if (boid.gameObject.CompareTag("DominionLeader"))
             {
                 boid.gameObject.tag = "DominionShip";
+                
 
             }
         }
     }
 }
 
+//state for pursuing a target
 class PursueTarget : State
 {
     Pursue pursue;
@@ -121,6 +143,7 @@ class PursueTarget : State
 
     public override void Think()
     {
+        //get array of enemies
         if (boid.gameObject.CompareTag("StarFleet"))
         {
             enemies = GameObject.FindGameObjectsWithTag("DominionShip");
@@ -132,17 +155,21 @@ class PursueTarget : State
         }
         enemyTarget = enemies[0];
 
-        if (Vector3.Distance(boid.GetComponent<Pursue>().target.transform.position,boid.transform.position)<attackDistance)
+        //if pursuing target
+        if (boid.GetComponent<Pursue>().target != null)
         {
-            //Path path = GameObject.FindGameObjectWithTag("Path").GetComponent<Path>();
-            boid.GetComponent<Attack>().target = boid.GetComponent<Pursue>().target;
-            boid.GetComponent<StateMachine>().ChangeState(new AttackState(), boid);
+            //if target is in range, attack!
+            if (Vector3.Distance(boid.GetComponent<Pursue>().target.transform.position, boid.transform.position) < attackDistance)
+            {
+                boid.GetComponent<Attack>().target = boid.GetComponent<Pursue>().target;
+                boid.GetComponent<StateMachine>().ChangeState(new AttackState(), boid);
+            }
         }
 
-        //if certain distance and target is in sight (dot product) = attackstate
+        //get nearest enemy
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (Vector3.Distance(enemyTarget.transform.position, boid.gameObject.transform.position) > Vector3.Distance(enemies[i].transform.position, boid.gameObject.transform.position))
+            if (Vector3.Distance(enemyTarget.transform.position, boid.gameObject.transform.position) > Vector3.Distance(enemies[i].transform.position, boid.gameObject.transform.position)  || boid.GetComponent<Pursue>().target==null)
             {
                 enemyTarget = enemies[i];
             }
@@ -154,11 +181,11 @@ class PursueTarget : State
     }
 }
 
+//state for offset pursue
 class OffsetPursueTarget : State
 {
     OffsetPursue offsetPursue;
     GameObject[] enemies=null;
-    //GameObject enemyTarget;
 
     public override void Enter()
     {
@@ -175,27 +202,21 @@ class OffsetPursueTarget : State
     public override void Think()
     {
 
-        //Debug.Log("Her4e");
+        //get array of enemies
         if (boid.gameObject.CompareTag("StarFleet"))
         {
             enemies = GameObject.FindGameObjectsWithTag("DominionShip");
         }
-        if (boid.gameObject.CompareTag("RunaboutLeader") || boid.gameObject.CompareTag("Runabout"))
+        else if (boid.gameObject.CompareTag("RunaboutLeader") || boid.gameObject.CompareTag("Runabout"))
         {
             
             boid.gameObject.tag = "StarFleet";
 
             enemies = GameObject.FindGameObjectsWithTag("DominionShip");
 
-
-
         }
-
-
-        if (boid.gameObject.CompareTag("DominionShip") )
+        else if (boid.gameObject.CompareTag("DominionShip") )
         {
-
-            //boid.gameObject.tag = "StarFleet";
 
             enemies = GameObject.FindGameObjectsWithTag("StarFleet");
 
@@ -203,24 +224,20 @@ class OffsetPursueTarget : State
 
         }
 
-
-        //enemyTarget = enemies[0];
-
-        //if certain distance and target is in sight (dot product) = attackstate
-
-        //if enemy nearby, pursue!
+        //if enemy nearby, seek!
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (Vector3.Distance(enemies[i].transform.position, boid.gameObject.transform.position)<=boid.GetComponent<Pursue>().shootingDistance)
+            if (Vector3.Distance(enemies[i].transform.position, boid.gameObject.transform.position)<=boid.GetComponent<Pursue>().shootingDistance || boid.GetComponent<OffsetPursue>().leader==null)
             {
-                
-                boid.GetComponent<Pursue>().target = enemies[i].GetComponent<Boid>();
-                boid.GetComponent<StateMachine>().ChangeState(new PursueTarget(), boid);
+
+                boid.GetComponent<Seek>().targetGameObject = enemies[i];
+                boid.GetComponent<StateMachine>().ChangeState(new SeekTarget(), boid);
             }
         }
     }
 }
 
+//state for attacking enemies
 class AttackState : State
 {
     Attack attack;
@@ -241,19 +258,23 @@ class AttackState : State
 
     public override void Think()
     {
+
+        //get arrayy of enemies
+        if (boid.gameObject.CompareTag("StarFleet"))
+        {
+            enemies = GameObject.FindGameObjectsWithTag("DominionShip");
+        }
+        else if (boid.gameObject.CompareTag("DominionShip"))
+        {
+            enemies = GameObject.FindGameObjectsWithTag("StarFleet");
+        }
+
+        //if object has a current target
         if (boid.GetComponent<Attack>().target == null)
         {
-            if (boid.gameObject.CompareTag("StarFleet"))
-            {
-                enemies = GameObject.FindGameObjectsWithTag("DominionShip");
-            }
-            else if (boid.gameObject.CompareTag("DominionShip"))
-            {
-                enemies = GameObject.FindGameObjectsWithTag("StarFleet");
-            }
-
             enemyTarget = enemies[0];
 
+            //find nearest enemy
             for(int i = 1; i < enemies.Length; i++)
             {
                 if (Vector3.Distance(enemies[i].transform.position, boid.transform.position) < Vector3.Distance(enemyTarget.transform.position, boid.transform.position))
@@ -263,24 +284,15 @@ class AttackState : State
             }
 
             Debug.Log("Acquiring new target");
-            //Path path = GameObject.FindGameObjectWithTag("Path").GetComponent<Path>();
-            boid.GetComponent<Pursue>().target = enemyTarget.GetComponent<Boid>();
-            boid.GetComponent<StateMachine>().ChangeState(new PursueTarget(), boid);
+            //seek new target
+            boid.GetComponent<Seek>().targetGameObject = enemyTarget;
+            boid.GetComponent<StateMachine>().ChangeState(new SeekTarget(), boid);
 
-
-
-            ////if certain distance and target is in sight (dot product) = attackstate
-            //for (int i = 0; i < enemies.Length; i++)
-            //{
-            //    if (Vector3.Distance(enemyTarget.transform.position, boid.gameObject.transform.position) > Vector3.Distance(enemies[i].transform.position, boid.gameObject.transform.position))
-            //    {
-            //        enemyTarget = enemies[i];
-            //    }
-            //}
         }
     }
 }
 
+//state for following a path
 class FollowPathState : State
 {
     FollowPath followPath;
@@ -303,6 +315,7 @@ class FollowPathState : State
     }
 }
 
+//state for harmonic movement
 class HarmonicMovementState : State
 {
     HarmonicMovement movement;
@@ -332,43 +345,48 @@ public class ShipController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-
+        //if a leader
         if (this.CompareTag("FleetLeader") || this.CompareTag("DominionLeader"))
         {
-            ////GetComponent<Seek>().target = 
-            //Vector3 ArrivePos = new Vector3(this.forward.x, Vector3.forward.y, Vector3.forward.z * 200);
-            //Debug.Log(transform.TransformPoint(ArrivePos));
-            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0, 0, 300);
+            //arrive at a position 300 units ahead
+            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0, 0, 350);
             GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
-        }
+        }//if runabout leader, arrive at position 400 units ahead
         else if (this.CompareTag("RunaboutLeader"))
         {
-            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0, 0, 400);
+            GetComponent<Arrive>().targetPosition = transform.TransformPoint(0, 0, 450);
             GetComponent<StateMachine>().ChangeState(new ArriveAtTarget(), this.gameObject.GetComponent<Boid>());
 
-            //GameObject[] enemies = GameObject.FindGameObjectsWithTag("Dominion");
-        }
+        }//if a runabout(aka. follower)
         else if (this.CompareTag("Runabout"))
         {
+            //get nearest leader
+
+            GameObject leader=null;
+            //get list of runabout leaders
             GameObject[] leaders = GameObject.FindGameObjectsWithTag("RunaboutLeader");
-            GameObject leader=leaders[0];
+            if (leaders.Length > 0)
+            {
+                leader = leaders[0];
+            }
 
             for(int i = 1; i < leaders.Length; i++)
             {
+                //if current leader is further away than this new leader, switch leader
                 if (Vector3.Distance(leader.transform.position, this.gameObject.transform.position)> Vector3.Distance(leaders[i].transform.position, this.gameObject.transform.position))
                 {
                     leader = leaders[i];
                 }
             }
 
+            //offset pursue leader
             GetComponent<OffsetPursue>().leader = leader.GetComponent<Boid>();
             GetComponent<StateMachine>().ChangeState(new OffsetPursueTarget(), this.gameObject.GetComponent<Boid>());
 
         }
-        else if (!this.CompareTag("Runabout"))
+        else//all other ships
         {
-            //GetComponent<StateMachine>().ChangeState(new HarmonicMovementState(), this.gameObject.GetComponent<Boid>());
-            Invoke("MoveOut", 10);
+            Invoke("MoveOut", 5);
         }
     }
 
@@ -376,17 +394,15 @@ public class ShipController : MonoBehaviour {
     {
         if (this.CompareTag("StarFleet"))
         {
+            //offset pursue fleet leader
             GetComponent<OffsetPursue>().leader = GameObject.FindGameObjectWithTag("FleetLeader").GetComponent<Boid>();
         }
         if (this.CompareTag("DominionShip"))
         {
+            //offset pursue dominion leader
             GetComponent<OffsetPursue>().leader = GameObject.FindGameObjectWithTag("DominionLeader").GetComponent<Boid>();
         }
         GetComponent<StateMachine>().ChangeState(new OffsetPursueTarget(), this.gameObject.GetComponent<Boid>());
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

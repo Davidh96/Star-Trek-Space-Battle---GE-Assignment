@@ -19,19 +19,18 @@ public class Attack : SteeringBehaviour {
     {
         if (target != null)
         {
-            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(target.transform.position), Time.deltaTime*10);
 
             float dist = Vector3.Distance(target.transform.position, transform.position);
 
             Vector3 directionToTarget = target.transform.position - transform.position;
             float angle = Vector3.Angle(transform.forward, directionToTarget);
+            //if target is in fov and within a certain distance
             if (Mathf.Abs(angle) < shootingAngle & dist < shootingDistance)
             {
                 if (allowFire)
                 {
                     StartCoroutine(Fire());
                 }
-                //Debug.Log("target is in front of me");
             }
         }
 
@@ -45,15 +44,19 @@ public class Attack : SteeringBehaviour {
 
     private void Update()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position), Time.deltaTime);
+        if (target != null)
+        {
+            //smoothly turn towards target
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position), Time.deltaTime);
+        }
     }
 
 
     IEnumerator Fire()
     {
-        //this.transform.LookAt(target.transform);
 
         allowFire = false;
+
         //fire bullets 
         for (int i = 0; i < fireRate; i++)
         {

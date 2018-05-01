@@ -13,14 +13,15 @@ public class Explosion : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        //instantiate parts that will explode form the destroyed object
 		for(int i=0;i< partsCount; i++)
         {
-            //Debug.Log("In loop");
             Instantiate(part, transform.position, Random.rotation);
             Rigidbody rb = part.GetComponent<Rigidbody>();
+            //add explosive force to the objects
             rb.AddExplosionForce(power, transform.position, radius, 3.0f);
         }
-
+        //destroy explosive parts after 5 seconds
         Invoke("KillMe", 5);
     }
 

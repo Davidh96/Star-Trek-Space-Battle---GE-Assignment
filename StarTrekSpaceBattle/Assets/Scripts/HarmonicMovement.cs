@@ -30,11 +30,6 @@ public class HarmonicMovement : SteeringBehaviour {
         }
     }
 
-    public void Start()
-    {
-
-    }
-
     // Update is called once per frame
     public override Vector3 Calculate()
     {

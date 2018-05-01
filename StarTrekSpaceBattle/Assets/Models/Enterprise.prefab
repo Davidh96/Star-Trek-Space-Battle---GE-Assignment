@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 114785852359156274}
   - component: {fileID: 114055344885146652}
   - component: {fileID: 114349714716497624}
+  - component: {fileID: 114790948722568408}
   m_Layer: 11
   m_Name: Enterprise
   m_TagString: StarFleet
@@ -222,7 +223,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143915778072030}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -265,19 +266,19 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143915778072030}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e591be6d34c50f14db45c55597ff1dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 2
+  weight: 0.05
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   active: 0
   frequency: 0.3
-  amplitude: 100
-  radius: 20
-  distance: 50
+  amplitude: 10
+  radius: 10
+  distance: 10
   direction: 0
 --- !u!114 &114174742868587146
 MonoBehaviour:
@@ -371,16 +372,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38360c9e33028934e820e15a0ce6f1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 0.5
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   active: 1
-  scale: 10
-  forwardFeelerDepth: 5
-  sideFeelerDepth: 5
-  frontFeelerUpdatesPerSecond: 5
-  sideFeelerUpdatesPerSecond: 5
-  feelerRadius: 10
+  scale: 2
+  forwardFeelerDepth: 30
+  sideFeelerDepth: 30
+  frontFeelerUpdatesPerSecond: 15
+  sideFeelerUpdatesPerSecond: 15
+  feelerRadius: 15
   forceType: 0
   mask:
     serializedVersion: 2
@@ -422,6 +423,7 @@ MonoBehaviour:
   active: 0
   targetGameObject: {fileID: 0}
   target: {x: -42.3911, y: 19.540081, z: 58.635742}
+  stopDistance: 110
 --- !u!114 &114785852359156274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -438,6 +440,29 @@ MonoBehaviour:
   boid: {fileID: 0}
   active: 1
   leader: {fileID: 0}
+--- !u!114 &114790948722568408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143915778072030}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd3c850c3546a445b6d11ca5dee6664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  active: 1
+  target: {fileID: 0}
+  bulletSpawner: {fileID: 1457398207389750}
+  bulletPrefab: {fileID: 1914618631435472, guid: fb57ceb693d59714e91bc13006244897,
+    type: 2}
+  fireRate: 1
+  shootingDistance: 300
+  shootingAngle: 25
+  stopDistance: 100
 --- !u!198 &198305095778862276
 ParticleSystem:
   m_ObjectHideFlags: 1

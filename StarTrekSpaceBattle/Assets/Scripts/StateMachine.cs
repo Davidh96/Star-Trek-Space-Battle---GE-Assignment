@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//contains the methods and variables for a generic state
 public abstract class State
 {
     public StateMachine owner;
@@ -12,10 +13,10 @@ public abstract class State
 
 }
 
+//controls the switching of states
 public class StateMachine : MonoBehaviour {
 
     public State currentState;
-    public State previousState;
 
     private IEnumerator coroutine;
 
@@ -23,42 +24,15 @@ public class StateMachine : MonoBehaviour {
 
     private void OnEnable()
     {
-        //Debug.Log("Enabled!");
         StartCoroutine(Think());
     }
 
-    public void ChangeStateDelayed(State newState, float delay)
-    {
-        //coroutine = ChangeStateCoRoutine(newState, delay);
-        StartCoroutine(coroutine);
-    }
-
-    public void CancelDelayedStateChange()
-    {
-        if (coroutine != null)
-        {
-            StopCoroutine(coroutine);
-        }
-    }
-
-    //IEnumerator ChangeStateCoRoutine(State newState, float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-    //    ChangeState(newState);
-    //}
-
-    //public void RevertToPreviousState()
-    //{
-    //    ChangeState(previousState);
-    //}
-
+    //change current state
     public void ChangeState(State newState, Boid boid)
     {
-        //Debug.Log("Changing State");
-
+        //if in a non null state
         if (currentState != null)
         {
-            previousState = currentState;
             currentState.Exit();
         }
         currentState = newState;
@@ -69,17 +43,15 @@ public class StateMachine : MonoBehaviour {
        
     }
 
+    //check to see if any changes need to be made
     System.Collections.IEnumerator Think()
     {
         
         yield return new WaitForSeconds(Random.Range(0, 0.5f));
         while (true)
         {
-            //Debug.Log("tHINKING HERE");
-
             if (currentState != null)
             {
-                //Debug.Log("tHINKING HERE");
                 currentState.Think();
             }
             yield return new WaitForSeconds(1.0f / (float)updatesPerSecond);

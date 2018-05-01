@@ -13,6 +13,10 @@ TagManager:
   - RunaboutLeader
   - DominionShip
   - Path
+  - Camera
+  - CameraController
+  - TempCamera
+  - FinalCamera
   layers:
   - Default
   - TransparentFX

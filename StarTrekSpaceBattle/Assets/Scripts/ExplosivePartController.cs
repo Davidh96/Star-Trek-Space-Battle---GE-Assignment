@@ -9,6 +9,7 @@ public class ExplosivePartController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         targetScale = new Vector3(0.1f, 0.1f, 0.1f);
+        //destroy after 5 seconds
         Invoke("KillMe", 5);
     }
 
